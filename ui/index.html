@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Best Restaurants</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    <h1>Best Restaurants</h1>
+    <h5>Provide some information and find the best restaurants in your area!</h5>
+    <!-- INPUTS FOR THE SEARCH -->
+    <div class="inputs">
+      <div class="input-search">
+        <p>Restaurant name:</p>
+        <input type="text" id="name" class="input-text" />
+      </div>
+      <div class="input-search">
+        <p>Max distance:</p>
+        <input type="number" id="distance" class="input-text" />
+      </div>
+      <div class="input-search">
+        <p>Minimal rating:</p>
+        <input type="number" id="rating" class="input-text" />
+      </div>
+      <div class="input-search">
+        <p>Max price:</p>
+        <input type="number" id="price" class="input-text" />
+      </div>
+      <div class="input-search">
+        <p>Cuisine type:</p>
+        <input type="text" id="cuisine" class="input-text" />
+      </div>
+    </div>
+    <button id="btn-search" type="button">Search Restaurants</button>
+    <!-- RESULT LIST -->
+    <div class="result">
+      <ul id="result-list"></ul>
+      <div id="empty-list"></div>
+    </div>
+  </body>
+</html>
