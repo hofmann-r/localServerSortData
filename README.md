@@ -11,19 +11,19 @@ After installing node, run:
 - npm install
 
 # Testing
-1. With the node installed in the machine, open the terminal/powershell in the root folder of the project and execute:
- - node .\server\runServer.js
-   - The local server will run the application in the address http://localhost:4001
-   - You can open the URL in your browser to check if the server is running
-2. There are 3 endpoints
- - POST - /restaurants
-   - Request body fields -> check the restaurantService.js file
- - GET - /restaurants
-   - url params -> check the restaurantService.js file
- - GET - /cuisines
-   - no params needed
+- With the node installed in the machine, open the terminal/powershell in the root folder of the project and execute:
+  - node .\server\runServer.js
+    - The local server will run the application in the address http://localhost:4001
+    - You can open the URL in your browser to check if the server is running
+- There are 3 endpoints
+  - POST - /restaurants
+    - Request body fields -> check the restaurantService.js file
+  - GET - /restaurants
+    - url params -> check the restaurantService.js file
+  - GET - /cuisines
+    - no params needed
  
-3. Open a paralel terminal/powershell window and execute:
- - npm run dev
-   - After this, the application will run in localhost.
-   - Get the url provided in the terminal to access the application in your browser.
+- Open a paralel terminal/powershell window and execute:
+  - npm run dev
+    - After this, the application will run in localhost.
+    - Get the url provided in the terminal to access the application in your browser.
