@@ -13,7 +13,7 @@ After installing node, run:
 # Testing
 - With the node installed in the machine, open the terminal/powershell in the root folder of the project and execute:
   - node .\server\runServer.js
-    - The local server will run the application in the address http://localhost:4001
+    - The local server will run the application on localhost, port 4001.
     - You can open the URL in your browser to check if the server is running
 - There are 3 endpoints
   - POST - /restaurants

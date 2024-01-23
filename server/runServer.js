@@ -6,7 +6,7 @@ app.use(express.json());
 const port = 4001;
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`Server is running on http://localhost:${port}`);
 });
 
 app.get("/", (req, res) => {
