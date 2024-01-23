@@ -8,8 +8,8 @@ First, to run this application, it is necessary install node in the machine.
 The download can be done with the link: https://nodejs.org/en/download.
 
 After installing node, there are two ways to test this application: 
- - via terminal 
- - using a simple interface created in html
+ - Via terminal 
+ - Using a simple interface created in html
 
 # Testing via terminal
 1. With the node installed in the machine, open the terminal/powershell in the root folder of the project.
@@ -18,11 +18,11 @@ After installing node, there are two ways to test this application:
         
 2. To the search return the values properly, it will require some parameters along with the base execution line.
 - Available parameters (you can provide just one, some of them or them all):
- - --name: partial of full name of the restaurant
- - --distance: maximum distance of the restaurant
- - --rating: minimal rating of the restaurant
- - --price: maximum price of the restaurant food
- - --cuisine: partial of full name of the cuisine type
+  - --name: partial of full name of the restaurant
+  - --distance: maximum distance of the restaurant
+  - --rating: minimal rating of the restaurant
+  - --price: maximum price of the restaurant food
+  - --cuisine: partial of full name of the cuisine type
 
 3. For example, if you want to search a restaurant with partial name "cho" and max distance 10 miles. This is how you execute:
  - node .\scripts\runTerminal.js --name cho --distance 10
