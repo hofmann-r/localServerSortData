@@ -11,12 +11,12 @@ After installing node, there are two ways to test this application:
  - via terminal 
  - using a simple interface created in html
 
-1. Testing via terminal
+# Testing via terminal
   1. With the node installed in the machine, open the terminal/powershell in the root folder of the project.
     - The base command to run the application is:
       - node .\scripts\runTerminal.js
         
-  1. To the search return the values properly, it will require some parameters along with the base execution line.
+  2. To the search return the values properly, it will require some parameters along with the base execution line.
     - Available parameters (you can provide just one, some of them or them all):
       --name: partial of full name of the restaurant
       --distance: maximum distance of the restaurant
@@ -24,11 +24,11 @@ After installing node, there are two ways to test this application:
       --price: maximum price of the restaurant food
       --cuisine: partial of full name of the cuisine type
   
-  1. For example, if you want to search a restaurant with partial name "cho" and max distance 10 miles. This is how you execute:
+  3. For example, if you want to search a restaurant with partial name "cho" and max distance 10 miles. This is how you execute:
     - node .\scripts\runTerminal.js --name cho --distance 10
 
-2. Testing with interface
-  2. With the node installed in the machine, open the terminal/powershell in the root folder of the project and execute:
+# Testing with interface
+  1. With the node installed in the machine, open the terminal/powershell in the root folder of the project and execute:
     - npm install
     - npm run dev
       - After this, the application will run in localhost with some random port. 
