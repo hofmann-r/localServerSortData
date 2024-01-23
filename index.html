@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="app/style/style.css" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
     <script type="module" src="./main.js"></script>
   </head>
   <body>
@@ -41,7 +41,7 @@
       <div id="empty-list"></div>
     </div>
     <script type="module">
-      import { searchRestaurants } from "./app/service/search";
+      import { searchRestaurants } from "./app/search";
       function onClickSearch() {
         var name = document.getElementById("name").value;
         var distance = document.getElementById("distance").value;
@@ -51,6 +51,7 @@
 
         try {
           var result = [];
+          // get data from server
           result = searchRestaurants(name, distance, rating, price, cuisine);
           console.log(result);
           document.getElementById("result-list").innerHTML = "";
