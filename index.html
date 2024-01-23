@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Best Matched Restaurants</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="app/style/style.css" />
+    <script type="module" src="./main.js"></script>
+  </head>
+  <body>
+    <h1>Best Matched Restaurants</h1>
+    <h5>Provide some information and find the best restaurants in your area!</h5>
+    <!-- INPUTS FOR THE SEARCH -->
+    <div class="inputs">
+      <div class="input-search">
+        <p>Restaurant name:</p>
+        <input type="text" id="name" class="input-text" />
+      </div>
+      <div class="input-search">
+        <p>Max distance:</p>
+        <input type="number" id="distance" class="input-text" />
+      </div>
+      <div class="input-search">
+        <p>Minimal rating:</p>
+        <input type="number" id="rating" class="input-text" />
+      </div>
+      <div class="input-search">
+        <p>Max price:</p>
+        <input type="number" id="price" class="input-text" />
+      </div>
+      <div class="input-search">
+        <p>Cuisine type:</p>
+        <input type="text" id="cuisine" class="input-text" />
+      </div>
+    </div>
+    <button id="btn-search" type="button">Search Restaurants</button>
+    <!-- RESULT LIST -->
+    <div class="result">
+      <ul id="result-list"></ul>
+      <div id="empty-list"></div>
+    </div>
+    <script type="module">
+      import { searchRestaurants } from "./app/service/search";
+      function onClickSearch() {
+        var name = document.getElementById("name").value;
+        var distance = document.getElementById("distance").value;
+        var rating = document.getElementById("rating").value;
+        var price = document.getElementById("price").value;
+        var cuisine = document.getElementById("cuisine").value;
+
+        try {
+          var result = [];
+          result = searchRestaurants(name, distance, rating, price, cuisine);
+          console.log(result);
+          document.getElementById("result-list").innerHTML = "";
+          document.getElementById("empty-list").innerHTML = "";
+          if (result.length > 0) {
+            for (let row of result) {
+              var listHTML = document.getElementById("result-list");
+
+              listHTML.innerHTML += `
+                     <li class="row-list">
+                        <h3> Restaurant: ${row.name}. </h3> 
+                        <h4> Distance: ${row.distance} miles. </h4>
+                        <h4> Rating: ${row.customerRating}/5. </h4>
+                        <h4> Average price: $${row.price.toFixed(2)}. </h4>
+                        <h4>Cuisine type: ${row.cuisine.name}.<h4>
+                    </li>`;
+            }
+          } else {
+            document.getElementById("empty-list").innerHTML = "<p>* No restaurants found</p>";
+          }
+        } catch (error) {
+          console.log("here error");
+          alert(error);
+          return;
+        }
+      }
+      var btn = document.getElementById("btn-search");
+      // add event listener for the button, for action "click"
+      btn.addEventListener("click", onClickSearch);
+    </script>
+  </body>
+</html>
